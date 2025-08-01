@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func commandMapF(cfg *config) error {
+func commandMapF(cfg *config, args ...string) error {
 	listLocationRes, err := cfg.pokeapiClient.ListLocation(cfg.nextLocationsURL)
 	if err != nil {
 		return err
@@ -18,7 +18,7 @@ func commandMapF(cfg *config) error {
 	return nil
 }
 
-func commandMapB(cfg *config) error { 
+func commandMapB(cfg *config, args ...string) error { 
 	url := cfg.prevLocationsURL
 	listLocationRes, err := cfg.pokeapiClient.ListLocation(url)
 	if err != nil {
