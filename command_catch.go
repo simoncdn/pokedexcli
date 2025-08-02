@@ -33,7 +33,7 @@ func commandCatch(cfg *config, args ...string) error {
 		addToPokedex(cfg, pokemon)
 		fmt.Println("You may now inspect it with the inspect command.")
 	} else {
-		fmt.Printf("%s espaced!\n", pokemonName)
+		fmt.Printf("%s escaped!\n", pokemonName)
 	}
 
 	return nil
