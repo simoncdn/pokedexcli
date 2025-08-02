@@ -31,6 +31,7 @@ func commandCatch(cfg *config, args ...string) error {
 	if catchChance > difficulty {
 		fmt.Printf("%s was caught!\n", pokemonName)
 		addToPokedex(cfg, pokemon)
+		fmt.Println("You may now inspect it with the inspect command.")
 	} else {
 		fmt.Printf("%s espaced!\n", pokemonName)
 	}
